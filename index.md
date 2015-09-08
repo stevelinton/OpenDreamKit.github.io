@@ -1,11 +1,19 @@
 ---
-title: OpenDreamKit
-layout: post
+layout: default
+title: Home
 ---
 
-Open Digital Research Environment Toolkit for the Advancement of Mathematics
-============================================================================
+# OpenDreamKit: Open <br>Digital Research Environment Toolkit<br>for the Advancement of Mathematics
 
-This website is under construction.
+{% include intro.md %}
 
-[OpenDreamKit H2020 European proposal information](https://github.com/sagemath/grant-europe/blob/master/H2020/OpenDreamKit.rst)
+[Read more...](about)
+
+
+## News
+
+{% for post in site.posts %}
+{{ post.date | date_to_string }}
+: [{{ post.title }}]({{ site.baseurl}}{{ post.url }})
+{% endfor %}
+
